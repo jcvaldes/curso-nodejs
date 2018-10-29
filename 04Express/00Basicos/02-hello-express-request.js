@@ -7,7 +7,11 @@ app
 	.get('/', (req, res) => {
 		res.end('<h1>Hola Mundo desde Express :)</h1>')
 	})
-
+	.get('/users', (req, res) => {
+		res
+	           .set({'content-type': 'text/html; charset=utf-8'}
+		   .end('<h1>Hola estás en la sección de usuarios 😀</h1>')
+	})
 	///user/19-Jonathan-31
 	.get('/user/:id-:name-:age', (req, res) => {
 		res.end(`
